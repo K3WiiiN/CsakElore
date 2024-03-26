@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1e601dfd69e35d646bb97438c4dbeab3
+guid: 63e21129073260449a38d823cd846c37
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
@@ -906,7 +906,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 5917c0e93d180a842b61d1ebc62a195c,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: cea7b4908e889df4ea1487e9f97c3c67,
     type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
@@ -925,4 +925,4 @@ AssetOrigin:
   packageVersion: 1.2
   assetPath: Assets/Kevin Iglesias/Basic Motions/Animations/Movement/BasicMotions@Strafe01
     [RM].fbx
-  uploadId: 633224
+  uploadId: 648104

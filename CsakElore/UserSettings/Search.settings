@@ -16,6 +16,9 @@ scopes = {
 	"last_search.5A656512" = "ref=\"Adventure Character\""
 	"OpenInspectorPreview.5A656512" = "0"
 	"currentGroup.5A656512" = null
+	"last_search.8DF93126" = "input"
+	"OpenInspectorPreview.8DF93126" = "0"
+	"currentGroup.8DF93126" = null
 }
 providers = {
 	performance = {

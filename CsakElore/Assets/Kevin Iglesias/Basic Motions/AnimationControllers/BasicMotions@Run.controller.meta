@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb79e3fd0dd669f40a90a984b92a0ccf
+guid: b493467361c372f4fb1bfe063d2fea54
 timeCreated: 1568825285
 licenseType: Store
 NativeFormatImporter:
@@ -14,4 +14,4 @@ AssetOrigin:
   packageName: Basic Motions FREE
   packageVersion: 1.2
   assetPath: Assets/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Run.controller
-  uploadId: 633224
+  uploadId: 648104

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 067cc188e25b78b4a940a9fa67cd6ee7
+guid: 6cd59c0feb396aa48bc91c5ac6862204
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -1384,7 +1384,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 5917c0e93d180a842b61d1ebc62a195c,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: cea7b4908e889df4ea1487e9f97c3c67,
     type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
@@ -1401,4 +1401,4 @@ AssetOrigin:
   packageName: Basic Motions FREE
   packageVersion: 1.2
   assetPath: Assets/Kevin Iglesias/Basic Motions/Animations/Movement/BasicMotions@Jump01.fbx
-  uploadId: 633224
+  uploadId: 648104

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d42c5615ec78fc34cbcaf031b2975360
+guid: c972fd1e43435c5499c4c94edaec7d4d
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -871,7 +871,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 5917c0e93d180a842b61d1ebc62a195c,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: cea7b4908e889df4ea1487e9f97c3c67,
     type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
@@ -888,4 +888,4 @@ AssetOrigin:
   packageName: Basic Motions FREE
   packageVersion: 1.2
   assetPath: Assets/Kevin Iglesias/Basic Motions/Animations/Social/Conversation/BasicMotions@Talk01.fbx
-  uploadId: 633224
+  uploadId: 648104

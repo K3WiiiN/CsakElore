@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 69d59c13a83a7c74a8cc0607ded391ec
+guid: cbc500a5daea7c04892be5e81ed7a3c1
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -1323,7 +1323,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 5917c0e93d180a842b61d1ebc62a195c,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: cea7b4908e889df4ea1487e9f97c3c67,
     type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
@@ -1340,4 +1340,4 @@ AssetOrigin:
   packageName: Basic Motions FREE
   packageVersion: 1.2
   assetPath: Assets/Kevin Iglesias/Basic Motions/Animations/Idles/BasicMotions@Idle02.fbx
-  uploadId: 633224
+  uploadId: 648104
