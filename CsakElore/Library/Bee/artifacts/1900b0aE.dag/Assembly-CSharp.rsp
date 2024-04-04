@@ -417,7 +417,6 @@
 "Assets/Scripts/CameraControl.cs"
 "Assets/Scripts/Control.cs"
 "Assets/Scripts/GameManager.cs"
-"Assets/Scripts/PlayerControl.cs"
 -langversion:9.0
 
 /deterministic

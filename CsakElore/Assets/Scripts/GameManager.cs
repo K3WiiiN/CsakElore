@@ -1,53 +1,87 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.InputSystem.XR;
+
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
 
-    // Start is called before the first frame update
+    public TextMeshProUGUI mapFinishText;
+    public Button exitButton;
+
+   
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
-    }
 
-    void gameOver()
-    {
-        gameOverText.gameObject.SetActive(true);
-        restartButton.gameObject.SetActive(true);
-    }
-
-    void Finish()
-    {
-
-    }
-
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Obstacle"))
+        // Karakter Y-koordinátájának ellenõrzése
+        if (transform.position.y < -100f)
         {
             gameOver();
         }
 
-        if (collision.gameObject.CompareTag("Finish"))
+
+
+
+    }
+
+    //Játék vége
+    void gameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
+        exitButton.gameObject.SetActive(true);
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+    }
+
+    //Pálya teljesítve
+    void Finish()
+    {
+        mapFinishText.gameObject.SetActive(true);
+        exitButton.gameObject.SetActive(true);
+        Debug.Log("Pálya teljesítve");
+    }
+
+    //Játék újrakezdése
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+    }
+
+   
+
+    //Ütközés objektummal
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+
+
+        if (hit.gameObject.CompareTag("Obstacle"))
+        {
+            gameOver();
+            Debug.Log("Akadály ütközés");
+        }
+
+       
+        
+
+
+        if (hit.gameObject.CompareTag("Finish"))
         {
             Finish();
         }
     }
+
+
+      
 
 }
