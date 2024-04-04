@@ -480,6 +480,7 @@ GameObject:
   - component: {fileID: 385669321}
   - component: {fileID: 385669320}
   - component: {fileID: 385669319}
+  - component: {fileID: 385669322}
   m_Layer: 5
   m_Name: "P\xE1lya v\xE1laszt\xE1s"
   m_TagString: Untagged
@@ -550,7 +551,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 385669320}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385669322}
+        m_TargetAssemblyTypeName: MenuControl, Assembly-CSharp
+        m_MethodName: LoadPalyavalaszto
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &385669320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,6 +602,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385669317}
   m_CullTransparentMesh: 1
+--- !u!114 &385669322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385669317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 997c982d8a155a24ea25581a43a5ebef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fomenu: 
+  Palyavalaszto: Palyavalaszto
+  Beallitasok: 
+  Belepes: 
 --- !u!1 &435210398
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,6 +873,7 @@ GameObject:
   - component: {fileID: 1055302072}
   - component: {fileID: 1055302071}
   - component: {fileID: 1055302070}
+  - component: {fileID: 1055302073}
   m_Layer: 5
   m_Name: "Kil\xE9p\xE9s"
   m_TagString: Untagged
@@ -914,7 +944,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1055302071}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1055302073}
+        m_TargetAssemblyTypeName: MenuControl, Assembly-CSharp
+        m_MethodName: LoadBelepes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1055302071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +995,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055302068}
   m_CullTransparentMesh: 1
+--- !u!114 &1055302073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055302068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 997c982d8a155a24ea25581a43a5ebef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fomenu: 
+  Palyavalaszto: 
+  Beallitasok: 
+  Belepes: Belepes
 --- !u!1 &1075765553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,6 +1227,7 @@ GameObject:
   - component: {fileID: 1433986389}
   - component: {fileID: 1433986388}
   - component: {fileID: 1433986387}
+  - component: {fileID: 1433986390}
   m_Layer: 5
   m_Name: "Be\xE1ll\xEDt\xE1sok"
   m_TagString: Untagged
@@ -1239,7 +1298,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1433986388}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433986390}
+        m_TargetAssemblyTypeName: MenuControl, Assembly-CSharp
+        m_MethodName: LoadBeallitasok
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1433986388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1278,6 +1349,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433986385}
   m_CullTransparentMesh: 1
+--- !u!114 &1433986390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433986385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 997c982d8a155a24ea25581a43a5ebef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fomenu: 
+  Palyavalaszto: 
+  Beallitasok: Beallitasok
+  Belepes: 
 --- !u!1 &1578636327
 GameObject:
   m_ObjectHideFlags: 0

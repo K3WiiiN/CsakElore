@@ -417,6 +417,7 @@
 "Assets/Scripts/CameraControl.cs"
 "Assets/Scripts/Control.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/MenuControl.cs"
 -langversion:9.0
 
 /deterministic

@@ -4,5 +4,21 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Belepes.unity
+    guid: 24bc5a4476d81584fae3fa89830ce0c5
+  - enabled: 1
+    path: Assets/Scenes/Fomenu.unity
+    guid: 6e8cd43cf77b33c478f481981717ad70
+  - enabled: 1
+    path: Assets/Scenes/Palyavalaszto.unity
+    guid: 3c85d6d7a4adc284192ea2801025be35
+  - enabled: 1
+    path: Assets/Scenes/Beallitasok.unity
+    guid: ad0e29b70fe803547a425a14c2c59fda
+  - enabled: 1
+    path: Assets/Scenes/Tutorialvilag.unity
+    guid: 5d285cd9a65b29144a9f026d33944514
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
