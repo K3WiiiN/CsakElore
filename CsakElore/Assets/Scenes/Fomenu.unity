@@ -614,10 +614,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 997c982d8a155a24ea25581a43a5ebef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fomenu: 
+  Bejelentkezes: 
+  Belepes: 
   Palyavalaszto: Palyavalaszto
   Beallitasok: 
-  Belepes: 
+  Tutorialvilag: 
 --- !u!1 &435210398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,10 +1008,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 997c982d8a155a24ea25581a43a5ebef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fomenu: 
+  Bejelentkezes: 
+  Belepes: Belepes
   Palyavalaszto: 
   Beallitasok: 
-  Belepes: Belepes
+  Tutorialvilag: 
 --- !u!1 &1075765553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,10 +1363,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 997c982d8a155a24ea25581a43a5ebef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fomenu: 
+  Bejelentkezes: 
+  Belepes: 
   Palyavalaszto: 
   Beallitasok: Beallitasok
-  Belepes: 
+  Tutorialvilag: 
 --- !u!1 &1578636327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,6 +1504,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578636327}
   m_CullTransparentMesh: 1
+--- !u!1 &1737665564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1737665566}
+  - component: {fileID: 1737665565}
+  m_Layer: 0
+  m_Name: LoggedInManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1737665565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737665564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e07d2cfcfbf78149ae644b64fc0f68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  username: {fileID: 0}
+  password: {fileID: 0}
+  loggedInUsername: 
+  loggedInUserText: {fileID: 1939812475}
+  regusername: {fileID: 0}
+  regemail: {fileID: 0}
+  regpassword: {fileID: 0}
+  regpasswordaccept: {fileID: 0}
+  errorMessageReg: {fileID: 0}
+  successMessageReg: {fileID: 0}
+  errorMessageLog: {fileID: 0}
+  Fomenu: 
+--- !u!4 &1737665566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737665564}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 143, y: 71.81359, z: -47.20804}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782620294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1801,7 @@ GameObject:
   - component: {fileID: 1939812476}
   - component: {fileID: 1939812475}
   m_Layer: 5
-  m_Name: Bejelentkezett felh
+  m_Name: LoggedInUserText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1764,7 +1823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -303, y: 175}
+  m_AnchoredPosition: {x: -213, y: -175}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1939812475
@@ -1787,7 +1846,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bejelentkezett felhaszn\xE1l\xF3"
+  m_text: "<Bejelentkezett felhaszn\xE1l\xF3>\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1874,3 +1933,4 @@ SceneRoots:
   - {fileID: 1873684623}
   - {fileID: 435210402}
   - {fileID: 1075765556}
+  - {fileID: 1737665566}

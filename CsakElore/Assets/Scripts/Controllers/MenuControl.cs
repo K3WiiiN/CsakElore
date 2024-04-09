@@ -6,23 +6,37 @@ using UnityEngine.SceneManagement;
 public class MenuControl : MonoBehaviour
 {
     //BELÉPÉS MENÜ-------------------
-    //Fõmenü betöltése
-    public string Fomenu;
+    //Bejelentkezés menü betöltése (belépés gomb)
+    public string Bejelentkezes;
+
+    public void LoadBejelentkezes()
+    {
+
+        SceneManager.LoadScene(Bejelentkezes);
+    }
 
     public void ExitGame()
     {
-        // A program bezárása
+        // A program bezárása (kilépés gomb)
         Application.Quit();
-    }
-
-
-    public void LoadFomenu()
-    {
-       
-        SceneManager.LoadScene(Fomenu);
     }
     //BELÉPÉS MENÜ VÉGE-------------------
 
+
+    //BEJELENTKEZÉS MENÜ-------------------
+    //Fõmenü megnyitása (bejelentkezés gomb)
+    //Write.cs Login() metódus betölti a 'Fomenu' scene-t sikeres bejelentkezés során
+
+
+    //Kilépés BELEPES menübe (kilepes gomb)
+    public string Belepes;
+
+    public void LoadBelepes()
+    {
+
+        SceneManager.LoadScene(Belepes);
+    }
+    //BEJELENTKEZÉS MENÜ VÉGE-------------------
 
 
 
@@ -49,14 +63,7 @@ public class MenuControl : MonoBehaviour
     //Eredmenyek menu
 
 
-    //Kilépés BELEPES menübe
-    public string Belepes;
-
-    public void LoadBelepes()
-    {
-
-        SceneManager.LoadScene(Belepes);
-    }
+   
     //FÕMENÜ MENÜ VÉGE-------------------
 
 
@@ -71,7 +78,15 @@ public class MenuControl : MonoBehaviour
         SceneManager.LoadScene(Tutorialvilag);
     }
 
-    //Kilépés - Fõmenübe
+    //Kilépés - Fõmenübe (kilépés gombra)
+    public string Fomenu;
+
+    public void LoadFomenu()
+    {
+
+        SceneManager.LoadScene(Fomenu);
+    }
+
 
     //PÁLYAVÁLASZTÓ MENÜ VÉGE-------------------
 

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Belepes.unity
     guid: 24bc5a4476d81584fae3fa89830ce0c5
   - enabled: 1
+    path: Assets/Scenes/Bejelentkezes.unity
+    guid: 85d3c1a503d2008478aa731c95c75635
+  - enabled: 1
     path: Assets/Scenes/Fomenu.unity
     guid: 6e8cd43cf77b33c478f481981717ad70
   - enabled: 1
