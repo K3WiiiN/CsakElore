@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Belepes.unity
+    path: "Assets/Scenes/Men\xFCk/Belepes.unity"
     guid: 24bc5a4476d81584fae3fa89830ce0c5
   - enabled: 1
-    path: Assets/Scenes/Bejelentkezes.unity
+    path: "Assets/Scenes/Men\xFCk/Bejelentkezes.unity"
     guid: 85d3c1a503d2008478aa731c95c75635
   - enabled: 1
-    path: Assets/Scenes/Fomenu.unity
+    path: "Assets/Scenes/Men\xFCk/Fomenu.unity"
     guid: 6e8cd43cf77b33c478f481981717ad70
   - enabled: 1
-    path: Assets/Scenes/Palyavalaszto.unity
+    path: "Assets/Scenes/Men\xFCk/Palyavalaszto.unity"
     guid: 3c85d6d7a4adc284192ea2801025be35
   - enabled: 1
-    path: Assets/Scenes/Beallitasok.unity
+    path: "Assets/Scenes/Men\xFCk/Beallitasok.unity"
     guid: ad0e29b70fe803547a425a14c2c59fda
   - enabled: 1
-    path: Assets/Scenes/Tutorialvilag.unity
+    path: "Assets/Scenes/P\xE1ly\xE1k/Tutorialvilag.unity"
     guid: 5d285cd9a65b29144a9f026d33944514
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

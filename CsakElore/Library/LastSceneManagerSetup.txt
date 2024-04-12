@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Belepes.unity
+- path: "Assets/Scenes/P\xE1ly\xE1k/Palya1.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0

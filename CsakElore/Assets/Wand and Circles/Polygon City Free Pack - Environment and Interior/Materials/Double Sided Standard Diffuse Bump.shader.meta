@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 17f2f62d8808f924b8841c6613757ead
+timeCreated: 1506211707
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 101685
+  packageName: 'Polygon City Pack - Environment and Interior [Free]'
+  packageVersion: 1.0
+  assetPath: Assets/Wand and Circles/Polygon City Free Pack - Environment and Interior/Materials/Double
+    Sided Standard Diffuse Bump.shader
+  uploadId: 203984

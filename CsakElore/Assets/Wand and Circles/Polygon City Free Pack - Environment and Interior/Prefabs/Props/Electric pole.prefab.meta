@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: a3e635465fb6fd24fb52f0273c0b42ef
+timeCreated: 1506247318
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 101685
+  packageName: 'Polygon City Pack - Environment and Interior [Free]'
+  packageVersion: 1.0
+  assetPath: Assets/Wand and Circles/Polygon City Free Pack - Environment and Interior/Prefabs/Props/Electric
+    pole.prefab
+  uploadId: 203984

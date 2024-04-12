@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 3f986823c4e971c4e8d4fd2f45c78ee8
+timeCreated: 1506247033
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 101685
+  packageName: 'Polygon City Pack - Environment and Interior [Free]'
+  packageVersion: 1.0
+  assetPath: Assets/Wand and Circles/Polygon City Free Pack - Environment and Interior/Prefabs/Props/Post
+    lamp.prefab
+  uploadId: 203984

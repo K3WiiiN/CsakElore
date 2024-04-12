@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4f08c1e18e3fd2b438baf97a89b44f8e
+timeCreated: 1455382258
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 56048
+  packageName: Glowing stylized MushRoom
+  packageVersion: 1.0
+  assetPath: Assets/Stylized Mushroom/Prefab/mushroom_All1.prefab
+  uploadId: 102956

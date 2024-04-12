@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1440
     height: 817
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 26301
+  controlID: 24748
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 26219
+  controlID: 24656
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -860,9 +860,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 318.86945, y: 68.74722, z: 0}
+    m_Target: {x: 108.90152, y: -178.08879, z: 219.38278}
     speed: 2
-    m_Value: {x: 318.86945, y: 68.74722, z: 0}
+    m_Value: {x: 108.90152, y: -178.08879, z: 219.38278}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -908,13 +908,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.17092611, y: 0.0384366, z: -0.0068216883, w: -0.98456526}
+    m_Target: {x: -0.23384519, y: -0.3003427, z: 0.07595828, w: -0.92168057}
     speed: 2
-    m_Value: {x: -0.17092611, y: 0.0384366, z: -0.0068216887, w: -0.98456526}
+    m_Value: {x: -0.23384519, y: -0.3003427, z: 0.07595828, w: -0.92168057}
   m_Size:
-    m_Target: 36.401245
+    m_Target: 188.51135
     speed: 2
-    m_Value: 36.401245
+    m_Value: 188.51135
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1141,9 +1141,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 4ceafeffacedfeffd8fafeffeefdfeffe4fffeff5c02ffffca04ffff8808ffffd00cffffd618fffffc1bffff0220ffffde21ffff6e22ffffe422ffffda23ffff4224ffff502bffffc02bffff0633ffff8633ffff783affff4a3bffff083effff444cffffb674ffffca77ffff4a7effff6883ffff0085ffff048bffff1c92fffff293ffff709fffff2ab8ffffecfaffff4ca40000dcd10000a0d200006ed300006ed400000cd600004ce0000012eb0000d809010030100100b4110100fc140100822201005e2a01003c35010006360100084b0100424b0100
+      m_SelectedIDs: 3ab80100
+      m_LastClickedID: 112698
+      m_ExpandedIDs: 9cd1fdff0ad4fdff109dfeff149dfeffb8a1feffbca1fefff8a3fefffca3feff92d9feffa6dcfeffe6cbffff16ceffffc2cfffff5ed2ffff8cd4ffff2cd7ffff96e0ffff6ee2ffff84e5ffff2ce7ffff90e9ffffa2edffff70f0ffff4ef3ffff0af5ffffecfaffffc2240100f68f0100b4b70100cab70100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1160,7 +1160,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 9}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1215,7 +1215,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Wand and Circles/Polygon City Free Pack - Environment and Interior/Prefabs/Trees
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1233,7 +1233,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b0230000
     m_LastClickedID: 9136
-    m_ExpandedIDs: ffffffff000000002aa500002ca500002ea5000030a50000b6a50000
+    m_ExpandedIDs: ffffffff0000000032a4000036a4000038a400003aa40000d6a40000f8a4000034c300008ce7000094e7000098e70000a0e70000a6e70000ace70000b8e70000bce700005ce80000ee420100f2420100f4420100f6420100f84201000843010004450100084501001e4501002645010086990100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1259,10 +1259,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 2040}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000002aa500002ca500002ea5000030a50000b6a50000
+    m_ExpandedIDs: ffffffff0000000032a4000036a4000038a400003aa40000d6a40000f8a4000034c300008ce7000094e7000098e70000a0e70000a6e70000ace70000b8e70000bce700005ce80000ee420100f2420100f4420100f6420100f84201000843010004450100084501001e4501002645010086990100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

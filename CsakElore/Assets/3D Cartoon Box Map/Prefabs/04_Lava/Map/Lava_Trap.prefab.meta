@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 68f9c660f36b07948960f28a33b6fea6
+timeCreated: 1448509302
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50743
+  packageName: 3D Cartoon Box Map
+  packageVersion: 1.1
+  assetPath: Assets/3D Cartoon Box Map/Prefabs/04_Lava/Map/Lava_Trap.prefab
+  uploadId: 93807

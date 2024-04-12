@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d5e95a24370fc9a459d171c2c2b65cb5
+timeCreated: 1448509100
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50743
+  packageName: 3D Cartoon Box Map
+  packageVersion: 1.1
+  assetPath: Assets/3D Cartoon Box Map/Prefabs/02_Cave/Map/Cave_Stair.prefab
+  uploadId: 93807
