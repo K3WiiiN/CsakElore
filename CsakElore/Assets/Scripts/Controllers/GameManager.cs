@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
     //Pálya teljesítve
     void Finish()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         mapFinishText.gameObject.SetActive(true);
         exitButton.gameObject.SetActive(true);
         Debug.Log("Pálya teljesítve");

@@ -69,6 +69,7 @@ public class MenuControl : MonoBehaviour
 
 
     //PÁLYAVÁLASZTÓ MENÜ-------------------
+
     //Tutorial világ betöltése
     public string Tutorialvilag;
 
@@ -77,6 +78,16 @@ public class MenuControl : MonoBehaviour
 
         SceneManager.LoadScene(Tutorialvilag);
     }
+
+    //Elsõ pálya betöltése
+    public string Palya1;
+
+    public void LoadPalya1()
+    {
+
+        SceneManager.LoadScene(Palya1);
+    }
+
 
     //Kilépés - Fõmenübe (kilépés gombra)
     public string Fomenu;
