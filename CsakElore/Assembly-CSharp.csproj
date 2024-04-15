@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Controllers\Control.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Sourcefile\EredmenyRead.cs" />
     <Compile Include="Assets\Scripts\Controllers\CameraControl.cs" />
     <Compile Include="Assets\Scripts\Database\Write.cs" />
     <Compile Include="Assets\Scripts\Database\Read.cs" />

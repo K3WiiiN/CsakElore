@@ -61,7 +61,12 @@ public class MenuControl : MonoBehaviour
     }
 
     //Eredmenyek menu
+    public string Eredmenyek;
 
+    public void LoadEredmenyek()
+    {
+        SceneManager.LoadScene(Eredmenyek);
+    }
 
    
     //FÕMENÜ MENÜ VÉGE-------------------

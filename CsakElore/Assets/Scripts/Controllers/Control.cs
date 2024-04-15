@@ -5,6 +5,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem.XR;
+using MySql.Data.MySqlClient;
+using System.Data;
+using System;
+using System.IO;
 
 
 //játékállapotok
@@ -60,7 +64,11 @@ public class Control : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
 
-
+    //Adatbázis
+    private string connectionString;
+    private MySqlConnection MS_Connection;
+    private MySqlCommand MS_Command;
+    string query;
 
     // Start is called before the first frame update
     void Start()
@@ -218,22 +226,39 @@ public class Control : MonoBehaviour
 
     void Finish()
     {
- 
-            Time.timeScale = 0f;
+        Time.timeScale = 0f;
 
-            //Idõ elmentése
-            PlayerPrefs.SetFloat("MainElapsedTime", mainElapsedTime);
-            PlayerPrefs.Save();
+        //Idõ elmentése
+        PlayerPrefs.SetFloat("MainElapsedTime", mainElapsedTime);
+        PlayerPrefs.Save();
 
-           
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-            mapFinishText.gameObject.SetActive(true);
-            exitButton.gameObject.SetActive(true);
-            Debug.Log("Pálya teljesítve");
-        
+       
+        SaveToLocalFile(mainElapsedTime, DateTime.Now);
 
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        mapFinishText.gameObject.SetActive(true);
+        exitButton.gameObject.SetActive(true);
+        Debug.Log("Pálya teljesítve");
     }
+    void SaveToLocalFile(float elapsedTime, DateTime date)
+    {
+        // Elmenteni kívánt adatok formázása stringgé
+        string formattedElapsedTime = TimeSpan.FromSeconds(elapsedTime).ToString(@"mm\:ss\:fff");
+        string formattedDate = date.ToString("yyyy.MM.dd");
+
+        // Adatok összeállítása stringgé
+        string dataToSave = formattedElapsedTime + "," + formattedDate;
+
+        // Fájlnév és elérési út megadása, ahova menteni szeretnéd az adatokat
+        string fileName = "savedData.txt";
+        string directoryPath = Application.persistentDataPath;
+        string filePath = Path.Combine(directoryPath, fileName);
+
+        // Adatok mentése a fájlba
+        System.IO.File.WriteAllText(filePath, dataToSave);
+    }
+
 
     void gameOver()
     {

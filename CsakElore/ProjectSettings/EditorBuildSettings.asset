@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/P\xE1ly\xE1k/Palya1.unity"
     guid: 593456340639347478697cffec6962af
+  - enabled: 1
+    path: "Assets/Scenes/Men\xFCk/Eredmenyek.unity"
+    guid: 8aa32cfef1a7b5140a4b392cd5c134f1
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

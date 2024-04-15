@@ -612,6 +612,8 @@ MonoBehaviour:
   Palyavalaszto: 
   Beallitasok: 
   Tutorialvilag: 
+  Palya1: 
+  Fomenu: 
 --- !u!1 &126658905
 GameObject:
   m_ObjectHideFlags: 0

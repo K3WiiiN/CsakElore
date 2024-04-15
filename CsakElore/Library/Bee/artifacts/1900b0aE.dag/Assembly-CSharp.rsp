@@ -421,6 +421,7 @@
 "Assets/Scripts/Controllers/MenuControl.cs"
 "Assets/Scripts/Database/Read.cs"
 "Assets/Scripts/Database/Write.cs"
+"Assets/Scripts/Sourcefile/EredmenyRead.cs"
 -langversion:9.0
 
 /deterministic
