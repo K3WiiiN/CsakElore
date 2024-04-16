@@ -12,6 +12,7 @@ using UnityEditor;
 using JetBrains.Annotations;
 using System.Security.Cryptography;
 using System.Text;
+using System.Linq;
 public class Write : MonoBehaviour
 {   //Belépés
     public TextMeshProUGUI username;
@@ -23,8 +24,6 @@ public class Write : MonoBehaviour
     public TextMeshProUGUI loggedInUserText;
 
     //Regisztráció
-    private TextMeshProUGUI id;
-    private TextMeshProUGUI eredmenyid;
     public TextMeshProUGUI regusername;
     public TextMeshProUGUI regemail;
     public TextMeshProUGUI regpassword;
@@ -32,7 +31,14 @@ public class Write : MonoBehaviour
 
 
     //Hibaüzenetek - regisztráció
-    public TextMeshProUGUI errorMessageReg;
+    public TextMeshProUGUI errorMessageRegMezo;
+    public TextMeshProUGUI errorMessageRegFelhnev;
+    public TextMeshProUGUI errorMessageRegEmail;
+    public TextMeshProUGUI errorMessageRegJelszo;
+    public TextMeshProUGUI errorMessageRegJelszoEgyf;
+
+
+    //Sikeres regisztráció
     public TextMeshProUGUI successMessageReg;
 
     //Hibaüzenetek - bejelentkezés
@@ -60,22 +66,70 @@ public class Write : MonoBehaviour
     {
         Connection();
 
-        //Már létezõ felhasználó?
+        // Már létezõ felhasználó?
         MySqlCommand checkUserCommand = new MySqlCommand($"SELECT COUNT(*) FROM users WHERE felhasznalonev = '{regusername.text}'", MS_Connection);
         int userCount = Convert.ToInt32(checkUserCommand.ExecuteScalar());
 
         if (userCount > 0)
         {
-            errorMessageReg.gameObject.SetActive(true);
+            errorMessageRegMezo.gameObject.SetActive(true);
         }
         else
         {
             // Ellenõrizzük, hogy minden regisztrációs mezõ kitöltve van-e
             if (string.IsNullOrWhiteSpace(regusername.text) || string.IsNullOrWhiteSpace(regemail.text) || string.IsNullOrWhiteSpace(regpassword.text) || string.IsNullOrWhiteSpace(regpasswordaccept.text))
             {
-                errorMessageReg.gameObject.SetActive(true);
+                errorMessageRegMezo.gameObject.SetActive(true);
+                errorMessageRegFelhnev.gameObject.SetActive(false);
+                errorMessageRegEmail.gameObject.SetActive(false);
+                errorMessageRegJelszo.gameObject.SetActive(false);
+                errorMessageRegJelszoEgyf.gameObject.SetActive(false);
                 successMessageReg.gameObject.SetActive(false);
                 return; // Kilépünk a metódusból, ha bármelyik mezõ üres
+            }
+            // Ellenõrizzük, hogy a felhasználónév legalább 4 karakter hosszú-e
+            if (regusername.text.Length < 4)
+            {
+                errorMessageRegFelhnev.gameObject.SetActive(true);
+                errorMessageRegMezo.gameObject.SetActive(false);
+                errorMessageRegEmail.gameObject.SetActive(false);
+                errorMessageRegJelszo.gameObject.SetActive(false);
+                errorMessageRegJelszoEgyf.gameObject.SetActive(false);
+                successMessageReg.gameObject.SetActive(false);
+                return; // Kilépünk a metódusból, ha a felhasználónév kevesebb, mint 4 karakter
+            }
+            // Ellenõrizzük, hogy az email cím tartalmazza-e az '@' és '.' karaktereket
+            if (!regemail.text.Contains("@") || !regemail.text.Contains("."))
+            {
+                errorMessageRegEmail.gameObject.SetActive(true);
+                errorMessageRegMezo.gameObject.SetActive(false);
+                errorMessageRegFelhnev.gameObject.SetActive(false);
+                errorMessageRegJelszo.gameObject.SetActive(false);
+                errorMessageRegJelszoEgyf.gameObject.SetActive(false);
+                successMessageReg.gameObject.SetActive(false);
+                return; // Kilépünk a metódusból, ha az email cím nem megfelelõ formátumú
+            }
+            // Ellenõrizzük, hogy a jelszó legalább 8 karakter hosszú-e
+            if (regpassword.text.Length < 8)
+            {
+                errorMessageRegJelszo.gameObject.SetActive(true);
+                errorMessageRegMezo.gameObject.SetActive(false);
+                errorMessageRegFelhnev.gameObject.SetActive(false);
+                errorMessageRegEmail.gameObject.SetActive(false);
+                errorMessageRegJelszoEgyf.gameObject.SetActive(false);
+                successMessageReg.gameObject.SetActive(false);
+                return; // Kilépünk a metódusból, ha a jelszó kevesebb, mint 8 karakter
+            }
+            // Ellenõrizzük, hogy a két jelszó egyezik-e
+            if (regpassword.text != regpasswordaccept.text)
+            {
+                errorMessageRegJelszoEgyf.gameObject.SetActive(true);
+                errorMessageRegMezo.gameObject.SetActive(false);
+                errorMessageRegFelhnev.gameObject.SetActive(false);
+                errorMessageRegEmail.gameObject.SetActive(false);
+                errorMessageRegJelszo.gameObject.SetActive(false);
+                successMessageReg.gameObject.SetActive(false);
+                return; // Kilépünk a metódusból, ha a két jelszó nem egyezik
             }
 
             string hashedPassword = HashHelper.CalculateSHA256(regpassword.text);
@@ -85,9 +139,16 @@ public class Write : MonoBehaviour
             MS_Command.ExecuteNonQuery();
             MS_Connection.Close();
             successMessageReg.gameObject.SetActive(true);
-            errorMessageReg.gameObject.SetActive(false);
+            errorMessageRegMezo.gameObject.SetActive(false);
+            errorMessageRegFelhnev.gameObject.SetActive(false);
+            errorMessageRegEmail.gameObject.SetActive(false);
+            errorMessageRegJelszo.gameObject.SetActive(false);
+            errorMessageRegJelszoEgyf.gameObject.SetActive(false);
         }
     }
+
+
+
 
 
 

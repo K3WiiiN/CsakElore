@@ -2910,7 +2910,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728924311}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00014485748, y: 0.939657, z: -0.34211782, w: 0.000397864}
+  m_LocalRotation: {x: 0.00014486928, y: 0.939657, z: -0.34211782, w: 0.00039789634}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3610,7 +3610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805495641}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00012831726, y: 0.9529747, z: -0.30304983, w: 0.00040350817}
+  m_LocalRotation: {x: 0.00012833049, y: 0.9529746, z: -0.30304986, w: 0.00040354975}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3701,7 +3701,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1091027142}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -4937,9 +4937,6 @@ PrefabInstance:
       addedObject: {fileID: 1091027143}
     - targetCorrespondingSourceObject: {fileID: 1525218576529477831, guid: 889d24f8fc349cf45b463fb9b13b0143, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1091027142}
-    - targetCorrespondingSourceObject: {fileID: 1525218576529477831, guid: 889d24f8fc349cf45b463fb9b13b0143, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1091027141}
   m_SourcePrefab: {fileID: 100100000, guid: 889d24f8fc349cf45b463fb9b13b0143, type: 3}
 --- !u!1 &1091027140 stripped
@@ -4964,22 +4961,6 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
---- !u!114 &1091027142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091027140}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2047085b2c1380449f8adb5ee2b517b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOverText: {fileID: 1795132788}
-  restartButton: {fileID: 806488588}
-  mapFinishText: {fileID: 1463639757}
-  exitButton: {fileID: 1342260959}
 --- !u!143 &1091027143
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6328,8 +6309,10 @@ MonoBehaviour:
   Belepes: 
   Palyavalaszto: Palyavalaszto
   Beallitasok: 
+  Eredmenyek: 
   Tutorialvilag: 
   Palya1: 
+  Palya2: 
   Fomenu: 
 --- !u!114 &1342260959
 MonoBehaviour:

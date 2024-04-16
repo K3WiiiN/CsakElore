@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuControl : MonoBehaviour
 {
+   
     //BELÉPÉS MENÜ-------------------
     //Bejelentkezés menü betöltése (belépés gomb)
     public string Bejelentkezes;
@@ -50,6 +51,8 @@ public class MenuControl : MonoBehaviour
         SceneManager.LoadScene(Palyavalaszto);
     }
 
+    
+
 
     //Beállítások betöltése
     public string Beallitasok;
@@ -86,11 +89,22 @@ public class MenuControl : MonoBehaviour
 
     //Elsõ pálya betöltése
     public string Palya1;
+   
 
     public void LoadPalya1()
     {
 
         SceneManager.LoadScene(Palya1);
+        Control.selectedLevel = "Palya1";
+    }
+
+    //Második pálya betöltése
+    public string Palya2;
+
+    public void LoadPalya2()
+    {
+        SceneManager.LoadScene(Palya2);
+        Control.selectedLevel = "Palya2";
     }
 
 

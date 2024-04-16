@@ -11,7 +11,12 @@ using System;
 using System.IO;
 
 
-//játékállapotok
+/*játékállapotok 
+ * Countdown - visszaszámlálás állapot
+ * Playing - játék állapot
+ * Paused - szünet állapot
+ */
+
 public enum PlayerState
 {
     Countdown,
@@ -21,6 +26,10 @@ public enum PlayerState
 
 public class Control : MonoBehaviour
 {
+    //Választott pálya
+    public static string selectedLevel;
+
+    //talaj réteg - isOnGroundhoz szükséges
     public LayerMask groundLayer;
 
     //Kamera vezérlés
@@ -42,13 +51,13 @@ public class Control : MonoBehaviour
     bool isGrounded;
     Vector3 velocity;
 
+    //Animátor
     private Animator animator;
 
     //Idõzítõ - játékosállapot idõ alapján
     public TextMeshProUGUI MainTimerText;
     public TextMeshProUGUI CountdownText;
     public PlayerState playerState = PlayerState.Countdown;
-
     float mainElapsedTime;
     float countdownDuration = 3f;
 
@@ -73,6 +82,7 @@ public class Control : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         animator = GetComponent<Animator>();
         trueSpeed = walkSpeed;
         controller = GetComponent<CharacterController>();
@@ -83,6 +93,7 @@ public class Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       //Szünet
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (playerState == PlayerState.Paused)
@@ -95,9 +106,10 @@ public class Control : MonoBehaviour
             }
         }
 
+        //Visszaszámlálás
         if (playerState == PlayerState.Countdown)
         {
-            // Visszaszámláló
+           
             countdownDuration -= Time.deltaTime;
             CountdownText.text = Mathf.CeilToInt(countdownDuration).ToString();
             if (countdownDuration <= 0)
@@ -121,6 +133,8 @@ public class Control : MonoBehaviour
                 velocity.y = -1;
             }
 
+            //animator változók - animációkhoz, sebességhez
+
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             {
                 bool isWalking = true;
@@ -132,6 +146,8 @@ public class Control : MonoBehaviour
                 animator.SetBool("Walk_bool", isWalking);
             }
 
+
+            //Shift - sprintelés - animáció - sebesség
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 trueSpeed = sprintSpeed;
@@ -147,6 +163,7 @@ public class Control : MonoBehaviour
                 animator.SetBool("Walk_bool", isWalking);
             }
 
+            //Irányítás, input kezelés
             movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             Vector3 direction = new Vector3(movement.x, 0, movement.y).normalized;
 
@@ -224,34 +241,44 @@ public class Control : MonoBehaviour
         }
     }
 
+    //Cél elérése
     void Finish()
     {
+    
         Time.timeScale = 0f;
 
         //Idõ elmentése
         PlayerPrefs.SetFloat("MainElapsedTime", mainElapsedTime);
         PlayerPrefs.Save();
 
-       
+       //Adatmentés meghívása
         SaveToLocalFile(mainElapsedTime, DateTime.Now);
 
+        //Egyéb változók beállítása
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         mapFinishText.gameObject.SetActive(true);
         exitButton.gameObject.SetActive(true);
         Debug.Log("Pálya teljesítve");
+        
     }
+
+    
+    //Adatmentés - idõ,dátum
     void SaveToLocalFile(float elapsedTime, DateTime date)
     {
-        // Elmenteni kívánt adatok formázása stringgé
+        // Bejelentkezett felhasználó nevének lekérése - fájl névhez
+        string loggedInUserName = PlayerPrefs.GetString("LoggedInUsername");
+
+        // Elmenteni kívánt adatok formázása stringgé - megf. formátum
         string formattedElapsedTime = TimeSpan.FromSeconds(elapsedTime).ToString(@"mm\:ss\:fff");
         string formattedDate = date.ToString("yyyy.MM.dd");
 
         // Adatok összeállítása stringgé
         string dataToSave = formattedElapsedTime + "," + formattedDate;
 
-        // Fájlnév és elérési út megadása, ahova menteni szeretnéd az adatokat
-        string fileName = "savedData.txt";
+        // Fájlnév: bejelentkezettfelh_pálya_savedData.txt és elérési út:perzisztens mappa (AppData -> LocalLow -> DefaultCompany -> CsakElore) megadása 
+        string fileName = $"{loggedInUserName}_{Control.selectedLevel}_savedData.txt";
         string directoryPath = Application.persistentDataPath;
         string filePath = Path.Combine(directoryPath, fileName);
 
@@ -260,6 +287,7 @@ public class Control : MonoBehaviour
     }
 
 
+    //Játék vége - pl.: akadály ütközés, leesés
     void gameOver()
     {
         gameOverText.gameObject.SetActive(true);
@@ -269,7 +297,7 @@ public class Control : MonoBehaviour
         Cursor.visible = true;
     }
 
-    //Szünet - ESC
+    //Szünet - ESC - Beallitasok scene
     void PauseGame()
     {
         savedTimeScale = Time.timeScale;
@@ -294,7 +322,7 @@ public class Control : MonoBehaviour
         Cursor.visible = false;
     }
 
-    //Játék újrakezdése
+    //Játék újrakezdése pl.: GameOver() esetén
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
