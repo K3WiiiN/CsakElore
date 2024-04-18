@@ -263,8 +263,19 @@ public class Control : MonoBehaviour
         
     }
 
-    
-    //Adatmentés - idõ,dátum
+
+    // Pályák specifikus idõhatárok
+    private Dictionary<string, (TimeSpan arany, TimeSpan ezust, TimeSpan bronz)> idohatarok = new Dictionary<string, (TimeSpan, TimeSpan, TimeSpan)>
+    {
+        { "Palya1", (TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(3), TimeSpan.FromMinutes(5)) },
+        { "Palya2", (TimeSpan.FromMinutes(2), TimeSpan.FromMinutes(4), TimeSpan.FromMinutes(6)) },
+        { "Palya3", (TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(2.5), TimeSpan.FromMinutes(4)) },
+        { "Palya4", (TimeSpan.FromMinutes(3), TimeSpan.FromMinutes(6), TimeSpan.FromMinutes(9)) },
+        { "Palya5", (TimeSpan.FromMinutes(2.5), TimeSpan.FromMinutes(5), TimeSpan.FromMinutes(7.5)) }
+    };
+
+
+    //Adatmentés - idõ,dátum,kupa neve
     void SaveToLocalFile(float elapsedTime, DateTime date)
     {
         // Bejelentkezett felhasználó nevének lekérése - fájl névhez
@@ -273,6 +284,10 @@ public class Control : MonoBehaviour
         // Elmenteni kívánt adatok formázása stringgé - megf. formátum
         string formattedElapsedTime = TimeSpan.FromSeconds(elapsedTime).ToString(@"mm\:ss\:fff");
         string formattedDate = date.ToString("yyyy.MM.dd");
+
+
+
+
 
         // Adatok összeállítása stringgé
         string dataToSave = formattedElapsedTime + "," + formattedDate;

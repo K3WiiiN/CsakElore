@@ -1,25 +1,23 @@
 using System.IO;
-using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI; // Image komponenshez szükséges namespace
 
 public class EredmenyekRead : MonoBehaviour
 {
-    //Idõ eredmények text
-    public TextMeshProUGUI eredmenytextido1;
-    public TextMeshProUGUI eredmenytextido2;
-    public TextMeshProUGUI eredmenytextido3;
-    public TextMeshProUGUI eredmenytextido4;
-    public TextMeshProUGUI eredmenytextido5;
+    // Idõ eredmények text
+    public TextMeshProUGUI[] eredmenytextido;
+    // Dátum eredmények text
+    public TextMeshProUGUI[] eredmenytextdatum;
+    // Kupa eredmények text
+    public TextMeshProUGUI[] eredmenytextkupa;
+    // Kupa eredmények image
+    public Image[] eredmenyimagekupa; // Image komponensek
 
-    //Dûtum eredmények text
-    public TextMeshProUGUI eredmenytextdatum1;
-    public TextMeshProUGUI eredmenytextdatum2;
-    public TextMeshProUGUI eredmenytextdatum3;
-    public TextMeshProUGUI eredmenytextdatum4;
-    public TextMeshProUGUI eredmenytextdatum5;
-
-
+    // Kupa képek
+    public Sprite aranyKupaKep;
+    public Sprite ezustKupaKep;
+    public Sprite bronzKupaKep;
 
     void Start()
     {
@@ -31,39 +29,39 @@ public class EredmenyekRead : MonoBehaviour
             string fileName = $"{loggedInUserName}_Palya{i}_savedData.txt";
             string filePath = Path.Combine(directoryPath, fileName);
 
-            //Fájl létezése
+            // Fájl létezése
             if (File.Exists(filePath))
             {
-                //Fájl beolvasása
+                // Fájl beolvasása
                 string data = File.ReadAllText(filePath);
 
-                //Adatok feldolgozása
+                // Adatok feldolgozása
                 string[] dataArray = data.Split(',');
                 string elapsedTimeString = dataArray[0];
                 string dateString = dataArray[1];
 
-                //Adatok megfelelõ text-hez rendelése
-                switch (i)
+                // Kupa meghatározása
+                string kupa = KupaHatarozas(elapsedTimeString, i);
+
+                // Adatok megfelelõ text-hez rendelése
+                eredmenytextido[i - 1].text = elapsedTimeString;
+                eredmenytextdatum[i - 1].text = dateString;
+                eredmenytextkupa[i - 1].text = kupa;
+
+                // Képek megjelenítése a megfelelõ kupákhoz
+                switch (kupa)
                 {
-                    case 1:
-                        eredmenytextido1.text = elapsedTimeString;
-                        eredmenytextdatum1.text = dateString;
+                    case "Arany":
+                        eredmenyimagekupa[i - 1].sprite = aranyKupaKep;
                         break;
-                    case 2:
-                        eredmenytextido2.text = elapsedTimeString;
-                        eredmenytextdatum2.text = dateString;
+                    case "Ezüst":
+                        eredmenyimagekupa[i - 1].sprite = ezustKupaKep;
                         break;
-                    case 3:
-                        eredmenytextido3.text = elapsedTimeString;
-                        eredmenytextdatum3.text = dateString;
+                    case "Bronz":
+                        eredmenyimagekupa[i - 1].sprite = bronzKupaKep;
                         break;
-                    case 4:
-                        eredmenytextido4.text = elapsedTimeString;
-                        eredmenytextdatum4.text = dateString;
-                        break;
-                    case 5:
-                        eredmenytextido5.text = elapsedTimeString;
-                        eredmenytextdatum5.text = dateString;
+                    default:
+                        Debug.Log($"Ismeretlen kupa típus: {kupa}");
                         break;
                 }
             }
@@ -74,4 +72,52 @@ public class EredmenyekRead : MonoBehaviour
         }
     }
 
+    string KupaHatarozas(string ido, int palyaSzam)
+    {
+        string[] idoElemek = ido.Split(':');
+        int perc = int.Parse(idoElemek[0]);
+        int masodperc = int.Parse(idoElemek[1]);
+
+        switch (palyaSzam)
+        {
+            case 1:
+                if (perc == 0 && masodperc <= 45)
+                    return "Arany";
+                else if (perc == 0 && masodperc <= 50)
+                    return "Ezüst";
+                else
+                    return "Bronz";
+            case 2:
+                if (perc == 0 && masodperc <= 55)
+                    return "Arany";
+                else if (perc == 1 && masodperc <= 0)
+                    return "Ezüst";
+                else
+                    return "Bronz";
+            case 3:
+                if (perc < 1 || (perc == 1 && masodperc <= 10))
+                    return "Arany";
+                else if (perc == 1 && masodperc <= 20)
+                    return "Ezüst";
+                else
+                    return "Bronz";
+            case 4:
+                if (perc < 1 || (perc == 1 && masodperc <= 10))
+                    return "Arany";
+                else if (perc == 1 && masodperc <= 20)
+                    return "Ezüst";
+                else
+                    return "Bronz";
+            case 5:
+                if (perc < 1 || (perc == 1 && masodperc <= 10))
+                    return "Arany";
+                else if (perc == 1 && masodperc <= 20)
+                    return "Ezüst";
+                else
+                    return "Bronz";
+            // Add meg a többi pálya kupa logikáját itt
+            default:
+                return "Nincs meghatározva kupa";
+        }
+    }
 }
