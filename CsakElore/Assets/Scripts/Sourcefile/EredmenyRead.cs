@@ -82,39 +82,74 @@ public class EredmenyekRead : MonoBehaviour
         {
             case 1:
                 if (perc == 0 && masodperc <= 45)
+                { 
                     return "Arany";
+                }
                 else if (perc == 0 && masodperc <= 50)
-                    return "Ezüst";
-                else
+                { 
+                    return "Ezüst"; 
+                }
+                else if (perc >= 1)
+                {
                     return "Bronz";
+                }
+                return "-";
             case 2:
                 if (perc == 0 && masodperc <= 55)
+                {
                     return "Arany";
-                else if (perc == 1 && masodperc <= 0)
+                }
+                else if (perc >= 1)
+                {
                     return "Ezüst";
-                else
+                }
+                else if (perc >= 1 && masodperc == 05)
+                {
                     return "Bronz";
+                }
+                return "-";
             case 3:
-                if (perc < 1 || (perc == 1 && masodperc <= 10))
+                if (perc == 0 && masodperc <= 45)
+                {
                     return "Arany";
-                else if (perc == 1 && masodperc <= 20)
+                }
+                else if (perc == 0 && masodperc <= 50)
+                {
                     return "Ezüst";
-                else
+                }
+                else if (perc >= 1)
+                {
                     return "Bronz";
+                }
+                return "-";
             case 4:
-                if (perc < 1 || (perc == 1 && masodperc <= 10))
+                if (perc == 0 && masodperc <= 45)
+                {
                     return "Arany";
-                else if (perc == 1 && masodperc <= 20)
+                }
+                else if (perc == 0 && masodperc <= 50)
+                {
                     return "Ezüst";
-                else
+                }
+                else if (perc >= 1)
+                {
                     return "Bronz";
+                }
+                return "-";
             case 5:
-                if (perc < 1 || (perc == 1 && masodperc <= 10))
+                if (perc == 0 && masodperc <= 45)
+                {
                     return "Arany";
-                else if (perc == 1 && masodperc <= 20)
+                }
+                else if (perc == 0 && masodperc <= 50)
+                {
                     return "Ezüst";
-                else
+                }
+                else if (perc >= 1)
+                {
                     return "Bronz";
+                }
+                return "-";
             // Add meg a többi pálya kupa logikáját itt
             default:
                 return "Nincs meghatározva kupa";

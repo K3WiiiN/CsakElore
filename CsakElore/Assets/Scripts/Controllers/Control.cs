@@ -14,9 +14,7 @@ using System.IO;
 /*játékállapotok 
  * Countdown - visszaszámlálás állapot
  * Playing - játék állapot
- * Paused - szünet állapot
- */
-
+ * Paused - szünet állapot*/
 public enum PlayerState
 {
     Countdown,
@@ -79,6 +77,9 @@ public class Control : MonoBehaviour
     private MySqlCommand MS_Command;
     string query;
 
+   
+
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -88,6 +89,7 @@ public class Control : MonoBehaviour
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+       
     }
 
     // Update is called once per frame
@@ -182,6 +184,7 @@ public class Control : MonoBehaviour
             {
                 velocity.y = Mathf.Sqrt((jumpHeight * 10) * -2f * gravity);
                 animator.SetTrigger("Jump_trig");
+               
             }
 
             velocity.y += (gravity * 10) * Time.deltaTime;
@@ -219,7 +222,7 @@ public class Control : MonoBehaviour
     {
         //Boostpad
         if (hit.gameObject.CompareTag("Boostpad"))
-        {
+        {    
             trueSpeed = boostedSpeed;
         }
         if (!hit.gameObject.CompareTag("Boostpad"))
@@ -229,6 +232,7 @@ public class Control : MonoBehaviour
 
         if (hit.gameObject.CompareTag("Obstacle"))
         {
+           
             gameOver();
             Debug.Log("Akadály ütközés");
         }
@@ -237,6 +241,7 @@ public class Control : MonoBehaviour
         //Cél
         if (hit.gameObject.CompareTag("Finish"))
         {
+            
             Finish();
         }
     }
@@ -244,7 +249,6 @@ public class Control : MonoBehaviour
     //Cél elérése
     void Finish()
     {
-    
         Time.timeScale = 0f;
 
         //Idõ elmentése

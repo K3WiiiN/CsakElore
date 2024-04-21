@@ -419,7 +419,8 @@
 "Assets/Scripts/Controllers/Control.cs"
 "Assets/Scripts/Controllers/GameManager.cs"
 "Assets/Scripts/Controllers/MenuControl.cs"
-"Assets/Scripts/Database/Read.cs"
+"Assets/Scripts/Controllers/MusicControl.cs"
+"Assets/Scripts/Controllers/SFXControl.cs"
 "Assets/Scripts/Database/Write.cs"
 "Assets/Scripts/Sourcefile/EredmenyRead.cs"
 -langversion:9.0
