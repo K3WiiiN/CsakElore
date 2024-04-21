@@ -107,6 +107,15 @@ public class MenuControl : MonoBehaviour
         Control.selectedLevel = "Palya2";
     }
 
+    //Harmadik pálya betöltése
+
+    public string Palya3;
+    public void LoadPalya3()
+    {
+        SceneManager.LoadScene(Palya3);
+        Control.selectedLevel = "Palya3";
+    }
+
 
     //Kilépés - Fõmenübe (kilépés gombra)
     public string Fomenu;
