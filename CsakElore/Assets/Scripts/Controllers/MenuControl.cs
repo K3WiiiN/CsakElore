@@ -125,6 +125,16 @@ public class MenuControl : MonoBehaviour
         Control.selectedLevel = "Palya4";
     }
 
+    //Ötödik pálya betöltése
+
+    public string Palya5;
+    public void LoadPalya5()
+    {
+        SceneManager.LoadScene(Palya5);
+        Control.selectedLevel = "Palya5";
+    }
+
+    
 
     //Kilépés - Fõmenübe (kilépés gombra)
     public string Fomenu;
@@ -138,19 +148,4 @@ public class MenuControl : MonoBehaviour
 
     //PÁLYAVÁLASZTÓ MENÜ VÉGE-------------------
 
-
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

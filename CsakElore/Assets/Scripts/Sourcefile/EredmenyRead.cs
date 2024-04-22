@@ -113,11 +113,11 @@ public class EredmenyekRead : MonoBehaviour
                 {
                     return "Arany";
                 }
-                else if (perc == 1 && masodperc <= 53)
+                else if (perc == 1 && masodperc <= 05)
                 {
                     return "Ezüst";
                 }
-                else if (perc >= 1 && masodperc <= 55)
+                else if (perc >= 1 && masodperc <= 10)
                 {
                     return "Bronz";
                 }
@@ -137,20 +137,19 @@ public class EredmenyekRead : MonoBehaviour
                 }
                 return "-";
             case 5:
-                if (perc == 0 && masodperc <= 45)
+                if (perc == 10)
                 {
                     return "Arany";
                 }
-                else if (perc == 0 && masodperc <= 50)
+                else if (perc == 20)
                 {
                     return "Ezüst";
                 }
-                else if (perc >= 1)
+                else if (perc >= 30)
                 {
                     return "Bronz";
                 }
                 return "-";
-            // Add meg a többi pálya kupa logikáját itt
             default:
                 return "Nincs meghatározva kupa";
         }

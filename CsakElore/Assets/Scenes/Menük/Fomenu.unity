@@ -384,7 +384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: -42}
+  m_AnchoredPosition: {x: -20, y: 48}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384648640
@@ -501,6 +501,9 @@ MonoBehaviour:
   Tutorialvilag: 
   Palya1: 
   Palya2: 
+  Palya3: 
+  Palya4: 
+  Palya5: 
   Fomenu: 
 --- !u!1 &385669317
 GameObject:
@@ -656,6 +659,9 @@ MonoBehaviour:
   Tutorialvilag: 
   Palya1: 
   Palya2: 
+  Palya3: 
+  Palya4: 
+  Palya5: 
   Fomenu: 
 --- !u!1 &435210398
 GameObject:
@@ -1054,6 +1060,9 @@ MonoBehaviour:
   Tutorialvilag: 
   Palya1: 
   Palya2: 
+  Palya3: 
+  Palya4: 
+  Palya5: 
   Fomenu: 
 --- !u!1 &1075765553
 GameObject:
@@ -1296,7 +1305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: 47}
+  m_AnchoredPosition: {x: -20, y: -45}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433986387
@@ -1413,6 +1422,9 @@ MonoBehaviour:
   Tutorialvilag: 
   Palya1: 
   Palya2: 
+  Palya3: 
+  Palya4: 
+  Palya5: 
   Fomenu: 
 --- !u!1 &1578636327
 GameObject:
