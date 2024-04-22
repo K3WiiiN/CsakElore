@@ -35,5 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/P\xE1ly\xE1k/Palya3.unity"
     guid: 50010c3057ccafc438602de7b7a30e42
+  - enabled: 1
+    path: "Assets/Scenes/P\xE1ly\xE1k/Palya4.unity"
+    guid: 9a78fa5c7e7377646946ca94f4c65349
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

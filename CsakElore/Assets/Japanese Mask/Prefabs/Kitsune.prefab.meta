@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b2b6d96047db11c48b2e829e16ca0cce
+timeCreated: 1464373562
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 66432
+  packageName: Kitsune Mask
+  packageVersion: 1.0
+  assetPath: Assets/Japanese Mask/Prefabs/Kitsune.prefab
+  uploadId: 127234

@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,10 +11,10 @@ using System;
 using System.IO;
 
 
-/*j·tÈk·llapotok 
- * Countdown - visszasz·ml·l·s ·llapot
- * Playing - j·tÈk ·llapot
- * Paused - sz¸net ·llapot*/
+/*j√°t√©k√°llapotok 
+ * Countdown - visszasz√°ml√°l√°s √°llapot
+ * Playing - j√°t√©k √°llapot
+ * Paused - sz√ºnet √°llapot*/
 public enum PlayerState
 {
     Countdown,
@@ -24,18 +24,18 @@ public enum PlayerState
 
 public class Control : MonoBehaviour
 {
-    //V·lasztott p·lya
+    //V√°lasztott p√°lya
     public static string selectedLevel;
 
-    //talaj rÈteg - isOnGroundhoz sz¸ksÈges
+    //talaj r√©teg - isOnGroundhoz sz√ºks√©ges
     public LayerMask groundLayer;
 
-    //Kamera vezÈrlÈs
+    //Kamera vez√©rl√©s
     public Transform cam;
     float turnSmoothTime = .1f;
     float turnSmoothVelocity;
 
-    //Karakter vezÈrlÈs
+    //Karakter vez√©rl√©s
     CharacterController controller;
     Vector2 movement;
     public float walkSpeed;
@@ -43,16 +43,16 @@ public class Control : MonoBehaviour
     float trueSpeed;
     public float boostedSpeed;
 
-    //Ugr·s
+    //Ugr√°s
     public float jumpHeight;
     public float gravity;
     bool isGrounded;
     Vector3 velocity;
 
-    //Anim·tor
+    //Anim√°tor
     private Animator animator;
 
-    //IdızÌtı - j·tÈkos·llapot idı alapj·n
+    //Id≈ëz√≠t≈ë - j√°t√©kos√°llapot id≈ë alapj√°n
     public TextMeshProUGUI MainTimerText;
     public TextMeshProUGUI CountdownText;
     public PlayerState playerState = PlayerState.Countdown;
@@ -71,15 +71,12 @@ public class Control : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
 
-    //Adatb·zis
+    //Adatb√°zis
     private string connectionString;
     private MySqlConnection MS_Connection;
     private MySqlCommand MS_Command;
     string query;
 
-   
-
- 
     // Start is called before the first frame update
     void Start()
     {
@@ -95,7 +92,7 @@ public class Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       //Sz¸net
+       //Sz√ºnet
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (playerState == PlayerState.Paused)
@@ -108,7 +105,7 @@ public class Control : MonoBehaviour
             }
         }
 
-        //Visszasz·ml·l·s
+        //Visszasz√°ml√°l√°s
         if (playerState == PlayerState.Countdown)
         {
            
@@ -117,12 +114,12 @@ public class Control : MonoBehaviour
             if (countdownDuration <= 0)
             {
                 CountdownText.text = "";
-                playerState = PlayerState.Playing; //J·tÈk ·llapot
+                playerState = PlayerState.Playing; //J√°t√©k √°llapot
             }
         }
         else if (playerState == PlayerState.Playing)
         {
-            // Fı idı
+            // F≈ë id≈ë
             mainElapsedTime += Time.deltaTime;
             int minutes = Mathf.FloorToInt(mainElapsedTime / 60);
             int seconds = Mathf.FloorToInt(mainElapsedTime % 60);
@@ -135,7 +132,7 @@ public class Control : MonoBehaviour
                 velocity.y = -1;
             }
 
-            //animator v·ltozÛk - anim·ciÛkhoz, sebessÈghez
+            //animator v√°ltoz√≥k - anim√°ci√≥khoz, sebess√©ghez
 
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             {
@@ -149,7 +146,7 @@ public class Control : MonoBehaviour
             }
 
 
-            //Shift - sprintelÈs - anim·ciÛ - sebessÈg
+            //Shift - sprintel√©s - anim√°ci√≥ - sebess√©g
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 trueSpeed = sprintSpeed;
@@ -165,7 +162,7 @@ public class Control : MonoBehaviour
                 animator.SetBool("Walk_bool", isWalking);
             }
 
-            //Ir·nyÌt·s, input kezelÈs
+            //Ir√°ny√≠t√°s, input kezel√©s
             movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             Vector3 direction = new Vector3(movement.x, 0, movement.y).normalized;
 
@@ -179,7 +176,7 @@ public class Control : MonoBehaviour
                 controller.Move(moveDirection.normalized * trueSpeed * Time.deltaTime);
             }
 
-            //Ugr·s
+            //Ugr√°s
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
                 velocity.y = Mathf.Sqrt((jumpHeight * 10) * -2f * gravity);
@@ -190,10 +187,10 @@ public class Control : MonoBehaviour
             velocity.y += (gravity * 10) * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
 
-            // Karakter Y-koordin·t·j·nak ellenırzÈse
+            // Karakter Y-koordin√°t√°j√°nak ellen≈ërz√©se
             if (transform.position.y < -2f)
             {
-                // Ha a karakter Y-koordin·t·ja -2 al· esik - zuhan·s anim·ciÛ
+                // Ha a karakter Y-koordin√°t√°ja -2 al√° esik - zuhan√°s anim√°ci√≥
                 animator.SetBool("Fall_bool", true);
             }
             else
@@ -201,7 +198,7 @@ public class Control : MonoBehaviour
                 animator.SetBool("Fall_bool", false);
             }
 
-            // Karakter Y-koordin·t·j·nak ellenırzÈse
+            // Karakter Y-koordin√°t√°j√°nak ellen≈ërz√©se
             if (transform.position.y < -100f)
             {
                 gameOver();
@@ -209,7 +206,7 @@ public class Control : MonoBehaviour
         }
         else if (playerState == PlayerState.Paused)
         {
-            // Ha a j·tÈk sz¸neteltetve van, a mozg·st Ès sebessÈget letiltjuk
+            // Ha a j√°t√©k sz√ºneteltetve van, a mozg√°st √©s sebess√©get letiltjuk
             movement = Vector2.zero;
             velocity = Vector3.zero;
         }
@@ -217,12 +214,12 @@ public class Control : MonoBehaviour
 
 
 
-    //‹tkˆzÈsek kezelÈse
+    //√útk√∂z√©sek kezel√©se
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         //Boostpad
         if (hit.gameObject.CompareTag("Boostpad"))
-        {    
+        {
             trueSpeed = boostedSpeed;
         }
         if (!hit.gameObject.CompareTag("Boostpad"))
@@ -234,11 +231,11 @@ public class Control : MonoBehaviour
         {
            
             gameOver();
-            Debug.Log("Akad·ly ¸tkˆzÈs");
+            Debug.Log("Akad√°ly √ºtk√∂z√©s");
         }
 
 
-        //CÈl
+        //C√©l
         if (hit.gameObject.CompareTag("Finish"))
         {
             
@@ -246,29 +243,29 @@ public class Control : MonoBehaviour
         }
     }
 
-    //CÈl elÈrÈse
+    //C√©l el√©r√©se
     void Finish()
     {
         Time.timeScale = 0f;
 
-        //Idı elmentÈse
+        //Id≈ë elment√©se
         PlayerPrefs.SetFloat("MainElapsedTime", mainElapsedTime);
         PlayerPrefs.Save();
 
-       //AdatmentÈs meghÌv·sa
+       //Adatment√©s megh√≠v√°sa
         SaveToLocalFile(mainElapsedTime, DateTime.Now);
 
-        //EgyÈb v·ltozÛk be·llÌt·sa
+        //Egy√©b v√°ltoz√≥k be√°ll√≠t√°sa
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         mapFinishText.gameObject.SetActive(true);
         exitButton.gameObject.SetActive(true);
-        Debug.Log("P·lya teljesÌtve");
+        Debug.Log("P√°lya teljes√≠tve");
         
     }
 
 
-    // P·ly·k specifikus idıhat·rok
+    // P√°ly√°k specifikus id√µhat√°rok
     private Dictionary<string, (TimeSpan arany, TimeSpan ezust, TimeSpan bronz)> idohatarok = new Dictionary<string, (TimeSpan, TimeSpan, TimeSpan)>
     {
         { "Palya1", (TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(3), TimeSpan.FromMinutes(5)) },
@@ -279,34 +276,31 @@ public class Control : MonoBehaviour
     };
 
 
-    //AdatmentÈs - idı,d·tum,kupa neve
+    //Adatment√©s - id≈ë,d√°tum
     void SaveToLocalFile(float elapsedTime, DateTime date)
     {
-        // Bejelentkezett felhaszn·lÛ nevÈnek lekÈrÈse - f·jl nÈvhez
+        // Bejelentkezett felhaszn√°l√≥ nev√©nek lek√©r√©se - f√°jl n√©vhez
         string loggedInUserName = PlayerPrefs.GetString("LoggedInUsername");
 
-        // Elmenteni kÌv·nt adatok form·z·sa stringgÈ - megf. form·tum
+        // Elmenteni k√≠v√°nt adatok form√°z√°sa stringg√© - megf. form√°tum
         string formattedElapsedTime = TimeSpan.FromSeconds(elapsedTime).ToString(@"mm\:ss\:fff");
         string formattedDate = date.ToString("yyyy.MM.dd");
 
 
-
-
-
-        // Adatok ˆssze·llÌt·sa stringgÈ
+        // Adatok √∂ssze√°ll√≠t√°sa stringg√©
         string dataToSave = formattedElapsedTime + "," + formattedDate;
 
-        // F·jlnÈv: bejelentkezettfelh_p·lya_savedData.txt Ès elÈrÈsi ˙t:perzisztens mappa (AppData -> LocalLow -> DefaultCompany -> CsakElore) megad·sa 
+        // F√°jln√©v: bejelentkezettfelh_p√°lya_savedData.txt √©s el√©r√©si √∫t:perzisztens mappa (AppData -> LocalLow -> DefaultCompany -> CsakElore) megad√°sa 
         string fileName = $"{loggedInUserName}_{Control.selectedLevel}_savedData.txt";
         string directoryPath = Application.persistentDataPath;
         string filePath = Path.Combine(directoryPath, fileName);
 
-        // Adatok mentÈse a f·jlba
+        // Adatok ment√©se a f√°jlba
         System.IO.File.WriteAllText(filePath, dataToSave);
     }
 
 
-    //J·tÈk vÈge - pl.: akad·ly ¸tkˆzÈs, leesÈs
+    //J√°t√©k v√©ge - pl.: akad√°ly √ºtk√∂z√©s, lees√©s
     void gameOver()
     {
         gameOverText.gameObject.SetActive(true);
@@ -316,7 +310,7 @@ public class Control : MonoBehaviour
         Cursor.visible = true;
     }
 
-    //Sz¸net - ESC - Beallitasok scene
+    //Sz√ºnet - ESC - Beallitasok scene
     void PauseGame()
     {
         savedTimeScale = Time.timeScale;
@@ -329,7 +323,7 @@ public class Control : MonoBehaviour
 
     }
 
-    //Folytat·s - ESC
+    //Folytat√°s - ESC
 
     void ResumeGame()
     {
@@ -341,10 +335,11 @@ public class Control : MonoBehaviour
         Cursor.visible = false;
     }
 
-    //J·tÈk ˙jrakezdÈse pl.: GameOver() esetÈn
+    //J√°t√©k √∫jrakezd√©se pl.: GameOver() eset√©n
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
+   
 }
