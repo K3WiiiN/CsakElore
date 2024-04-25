@@ -15,7 +15,7 @@ C:/Záródolgozat/CsakElore/CsakElore
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53127
+51293
 -job-worker-count
 1
 -background-job-worker-count
@@ -58,12 +58,12 @@ C:/Záródolgozat/CsakElore/CsakElore
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19088] Host "[IP] 192.168.1.8 [Port] 0 [Flags] 2 [Guid] 1857490582 [EditorId] 1857490582 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-75MC8NL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
-Player connection [19088] Host "[IP] 192.168.1.8 [Port] 0 [Flags] 2 [Guid] 1857490582 [EditorId] 1857490582 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-75MC8NL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [2288] Host "[IP] 192.168.1.13 [Port] 0 [Flags] 2 [Guid] 881047067 [EditorId] 881047067 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-75MC8NL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [2288] Host "[IP] 192.168.1.13 [Port] 0 [Flags] 2 [Guid] 881047067 [EditorId] 881047067 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-75MC8NL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 1
 [Physics::Module] Initialized MultithreadedJobDispatcher with 1 workers.
 Library Redirect Path: Library/
-Refreshing native plugins compatible for Editor in 3.41 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.69 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.2.6f1 (57daeefc879b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity 2023.2.6f1/Editor/Data/Resources/UnitySubsystems
@@ -79,7 +79,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity 2023.2.6f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity 2023.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity 2023.2.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56552
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56044
 Begin MonoManager ReloadAssembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
@@ -93,41 +93,41 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity 2023.2.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006190 seconds.
-- Loaded All Assemblies, in  0.982 seconds
+Registered in 0.005642 seconds.
+- Loaded All Assemblies, in  0.720 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-- Finished resetting the current domain, in  0.647 seconds
-Domain Reload Profiling: 1626ms
-	BeginReloadAssembly (385ms)
+- Finished resetting the current domain, in  0.570 seconds
+Domain Reload Profiling: 1286ms
+	BeginReloadAssembly (239ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (92ms)
-	RebuildNativeTypeToScriptingClass (49ms)
-	initialDomainReloadingComplete (108ms)
-	LoadAllAssembliesAndSetupDomain (343ms)
-		LoadAssemblies (380ms)
+	RebuildCommonClasses (72ms)
+	RebuildNativeTypeToScriptingClass (24ms)
+	initialDomainReloadingComplete (90ms)
+	LoadAllAssembliesAndSetupDomain (290ms)
+		LoadAssemblies (234ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (339ms)
-			TypeCache.Refresh (337ms)
-				TypeCache.ScanAssembly (310ms)
+		AnalyzeDomain (286ms)
+			TypeCache.Refresh (283ms)
+				TypeCache.ScanAssembly (259ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (648ms)
+	FinalizeReload (571ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (561ms)
+		SetupLoadedEditorAssemblies (476ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (17ms)
+			InitializePlatformSupportModulesInManaged (18ms)
 			SetLoadedEditorAssemblies (9ms)
-			BeforeProcessingInitializeOnLoad (14ms)
-			ProcessInitializeOnLoadAttributes (434ms)
-			ProcessInitializeOnLoadMethodAttributes (87ms)
+			BeforeProcessingInitializeOnLoad (12ms)
+			ProcessInitializeOnLoadAttributes (344ms)
+			ProcessInitializeOnLoadMethodAttributes (93ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -150,72 +150,56 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 Symbol file LoadedFromMemory doesn't match image C:\Záródolgozat\CsakElore\CsakElore\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Záródolgozat\CsakElore\CsakElore\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  2.020 seconds
-Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.757 seconds
+Refreshing native plugins compatible for Editor in 1.22 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.003 seconds
-Domain Reload Profiling: 4010ms
-	BeginReloadAssembly (679ms)
+- Finished resetting the current domain, in  1.481 seconds
+Domain Reload Profiling: 3230ms
+	BeginReloadAssembly (622ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
+		DisableScriptedObjects (10ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (50ms)
-	RebuildCommonClasses (73ms)
-	RebuildNativeTypeToScriptingClass (26ms)
-	initialDomainReloadingComplete (85ms)
-	LoadAllAssembliesAndSetupDomain (1143ms)
-		LoadAssemblies (764ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (61ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (65ms)
+	LoadAllAssembliesAndSetupDomain (979ms)
+		LoadAssemblies (702ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (588ms)
-			TypeCache.Refresh (476ms)
-				TypeCache.ScanAssembly (439ms)
-			BuildScriptInfoCaches (76ms)
-			ResolveRequiredComponents (31ms)
-	FinalizeReload (2003ms)
+		AnalyzeDomain (455ms)
+			TypeCache.Refresh (372ms)
+				TypeCache.ScanAssembly (348ms)
+			BuildScriptInfoCaches (56ms)
+			ResolveRequiredComponents (23ms)
+	FinalizeReload (1482ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1568ms)
+		SetupLoadedEditorAssemblies (1157ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (146ms)
-			ProcessInitializeOnLoadAttributes (1319ms)
-			ProcessInitializeOnLoadMethodAttributes (79ms)
-			AfterProcessingInitializeOnLoad (10ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (97ms)
+			ProcessInitializeOnLoadAttributes (976ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
+			AfterProcessingInitializeOnLoad (9ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.45 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 1.32 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 135 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 5836 unused Assets / (4.9 MB). Loaded Objects now: 6481.
-Memory consumption went from 192.1 MB to 187.2 MB.
-Total: 16.437600 ms (FindLiveObjects: 1.470800 ms CreateObjectMapping: 2.166800 ms MarkObjects: 8.474900 ms  DeleteObjects: 4.323200 ms)
+Unloading 5836 unused Assets / (4.2 MB). Loaded Objects now: 6481.
+Memory consumption went from 192.7 MB to 188.5 MB.
+Total: 11.903400 ms (FindLiveObjects: 0.874100 ms CreateObjectMapping: 0.774500 ms MarkObjects: 6.612200 ms  DeleteObjects: 3.640700 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 32336.846495 seconds.
-  path: Assets/Scenes/Pályák/Palya1.unity
-  artifactKey: Guid(593456340639347478697cffec6962af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Pályák/Palya1.unity using Guid(593456340639347478697cffec6962af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '380ebe2d51f51caa33eb8c28b316c533') in 0.0126118 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 39.830688 seconds.
-  path: Assets/Scenes/Pályák/Palya2.unity
-  artifactKey: Guid(1617832b1d7f4664caa28bef896e828c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Pályák/Palya2.unity using Guid(1617832b1d7f4664caa28bef896e828c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '47ab3656d30f50935c6447a89f5018c2') in 0.0015304 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 141.934176 seconds.
-  path: Assets/Scenes/Pályák/Palya5.unity
-  artifactKey: Guid(386c43ab653bc0046857f250d6b8ff0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Pályák/Palya5.unity using Guid(386c43ab653bc0046857f250d6b8ff0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e08d39aaf0420f355166a96ae06c1491') in 0.0011236 seconds
+  Time since last request: 15967.951917 seconds.
+  path: Assets/Scenes/Menük/Palyavalaszto.unity
+  artifactKey: Guid(3c85d6d7a4adc284192ea2801025be35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Menük/Palyavalaszto.unity using Guid(3c85d6d7a4adc284192ea2801025be35) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4337f37386db287cd1d60c71689d636a') in 0.0144282 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 

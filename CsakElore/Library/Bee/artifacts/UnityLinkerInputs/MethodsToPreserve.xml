@@ -6,8 +6,6 @@
 			<method name="RestartGame"/>
 			<method name="RestartGame"/>
 			<method name="RestartGame"/>
-		</type>
-		<type fullname="GameManager">
 			<method name="RestartGame"/>
 		</type>
 		<type fullname="MenuControl">
