@@ -81,57 +81,57 @@ public class EredmenyekRead : MonoBehaviour
         switch (palyaSzam)
         {
             case 1:
-                if (perc == 0 && masodperc <= 45)
-                { 
+                if ((perc == 0 && masodperc <= 45))
+                {
                     return "Arany";
                 }
-                else if (perc == 0 && masodperc <= 50)
-                { 
-                    return "Ezüst"; 
+                else if ((perc == 0 && masodperc > 45) && (perc == 0 && masodperc < 55))
+                {
+                    return "Ezüst";
                 }
-                else if (perc >= 1)
+                else if ((masodperc > 55) || (perc >=1))
                 {
                     return "Bronz";
                 }
                 return "-";
             case 2:
-                if (perc == 0 && masodperc <= 55)
+                if ((perc == 0 && masodperc <= 55))
                 {
                     return "Arany";
                 }
-                else if (perc >= 1)
+                else if ((perc >= 1) || (perc==0 && masodperc > 55))
                 {
                     return "Ezüst";
                 }
-                else if (perc >= 1 && masodperc == 05)
+                else if ((perc > 1 && masodperc >= 05))
                 {
                     return "Bronz";
                 }
                 return "-";
             case 3:
-                if (perc == 0 && masodperc <= 59)
+                if ((perc == 0 && masodperc <= 59))
                 {
                     return "Arany";
                 }
-                else if (perc == 1 && masodperc <= 05)
+                else if ((perc >= 1))
                 {
                     return "Ezüst";
                 }
-                else if (perc >= 1 && masodperc <= 10)
+                else if (perc >= 1 && masodperc >= 05)
                 {
                     return "Bronz";
                 }
                 return "-";
             case 4:
-                if (perc <= 1 && masodperc <= 05)
+                if ((perc < 1) || (perc == 1 && masodperc <= 05))
                 {
                     return "Arany";
                 }
-                else if (perc <= 1 && masodperc <= 07)
+                else if ((perc == 1 && masodperc > 05) && (perc == 1 && masodperc <= 7))   
                 {
                     return "Ezüst";
                 }
-                else if (perc >= 1 && masodperc >= 10)
+                else if ((perc >1) || (perc == 1 && masodperc > 10))
                 {
                     return "Bronz";
                 }

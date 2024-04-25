@@ -1804,7 +1804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9e7f31ae8e6ca2d4fa50a3d00096804b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 84.75011
+      value: 84.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9e7f31ae8e6ca2d4fa50a3d00096804b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1838,9 +1838,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: c#
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9e7f31ae8e6ca2d4fa50a3d00096804b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -8700617353114198275, guid: 9e7f31ae8e6ca2d4fa50a3d00096804b, type: 3}
+    - {fileID: 65702495048144492, guid: 9e7f31ae8e6ca2d4fa50a3d00096804b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7f31ae8e6ca2d4fa50a3d00096804b, type: 3}
@@ -2450,6 +2455,7 @@ MonoBehaviour:
   Palya2: 
   Palya3: 
   Palya4: 
+  Palya5: 
   Fomenu: 
 --- !u!114 &1009588419
 MonoBehaviour:
@@ -4881,7 +4887,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973864051}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0013001633, y: 0.95296603, z: -0.30304688, w: 0.004088515}
+  m_LocalRotation: {x: 0.0013001768, y: 0.95296603, z: -0.3030469, w: 0.0040885564}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -13,9 +13,6 @@
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime">
 		<type fullname="UnityEngine.Rendering.UI.DebugUIPrefabBundle" preserve="nothing" serialized="true"/>
 	</assembly>
-	<assembly fullname="Unity.RenderPipelines.Universal.Runtime">
-		<type fullname="UnityEngine.Rendering.Universal.TemporalAA/Settings" preserve="nothing" serialized="true"/>
-	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.FaceInfo_Legacy" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.FontAssetCreationSettings" preserve="nothing" serialized="true"/>
