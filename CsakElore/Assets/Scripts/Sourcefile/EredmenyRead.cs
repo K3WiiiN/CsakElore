@@ -123,29 +123,29 @@ public class EredmenyekRead : MonoBehaviour
                 }
                 return "-";
             case 4:
-                if (perc == 1 && masodperc <= 05)
+                if (perc <= 1 && masodperc <= 05)
                 {
                     return "Arany";
                 }
-                else if (perc == 1 && masodperc <= 07)
+                else if (perc <= 1 && masodperc <= 07)
                 {
                     return "Ezüst";
                 }
-                else if (perc >= 1 && masodperc <= 10)
+                else if (perc >= 1 && masodperc >= 10)
                 {
                     return "Bronz";
                 }
                 return "-";
             case 5:
-                if (perc == 10)
+                if (perc <= 10)
                 {
                     return "Arany";
                 }
-                else if (perc == 20)
+                else if (perc <= 20)
                 {
                     return "Ezüst";
                 }
-                else if (perc >= 30)
+                else if (perc <= 30)
                 {
                     return "Bronz";
                 }

@@ -1,0 +1,65 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="Control">
+			<method name="RestartGame"/>
+			<method name="RestartGame"/>
+			<method name="RestartGame"/>
+			<method name="RestartGame"/>
+			<method name="RestartGame"/>
+		</type>
+		<type fullname="GameManager">
+			<method name="RestartGame"/>
+		</type>
+		<type fullname="MenuControl">
+			<method name="ExitGame"/>
+			<method name="LoadBeallitasok"/>
+			<method name="LoadBejelentkezes"/>
+			<method name="LoadBelepes"/>
+			<method name="LoadBelepes"/>
+			<method name="LoadEredmenyek"/>
+			<method name="LoadFomenu"/>
+			<method name="LoadFomenu"/>
+			<method name="LoadFomenu"/>
+			<method name="LoadPalya1"/>
+			<method name="LoadPalya2"/>
+			<method name="LoadPalya3"/>
+			<method name="LoadPalya4"/>
+			<method name="LoadPalya5"/>
+			<method name="LoadPalyavalaszto"/>
+			<method name="LoadPalyavalaszto"/>
+			<method name="LoadPalyavalaszto"/>
+			<method name="LoadPalyavalaszto"/>
+			<method name="LoadPalyavalaszto"/>
+			<method name="LoadPalyavalaszto"/>
+			<method name="LoadPalyavalaszto"/>
+			<method name="LoadTutorialvilag"/>
+		</type>
+		<type fullname="Write">
+			<method name="Login"/>
+			<method name="Registration"/>
+		</type>
+	</assembly>
+	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField">
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerPanel">
+			<method name="OnScrollbarClicked"/>
+			<method name="OnScrollbarClicked"/>
+			<method name="ResetDebugManager"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerUIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+	</assembly>
+</linker>
